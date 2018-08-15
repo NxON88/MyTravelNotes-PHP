@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.7
+- https://www.phpmyadmin.net
+-
+- Хост: 127.0.0.1:3306
+- Время создания: Апр 23 2018 г., 18:40
+- Версия сервера: 5.7.20
+- Версия PHP: 7.2.0
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="MySiteDB" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="authors">
+                CREATE TABLE `authors` (
+                  `id` smallint(6) NOT NULL AUTO_INCREMENT,
+                  `login` varchar(10) NOT NULL,
+                  `password` varchar(10) NOT NULL,
+                  `rights` enum('u','a') NOT NULL DEFAULT 'u',
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'MySiteDB'
+    -->
+    <database name="MySiteDB">
+        <!-- Таблица authors -->
+        <table name="authors">
+            <column name="id">1</column>
+            <column name="login">Nick</column>
+            <column name="password"></column>
+            <column name="rights">u</column>
+        </table>
+        <table name="authors">
+            <column name="id">2</column>
+            <column name="login">Andrey</column>
+            <column name="password"></column>
+            <column name="rights">u</column>
+        </table>
+        <table name="authors">
+            <column name="id">3</column>
+            <column name="login">Alex</column>
+            <column name="password"></column>
+            <column name="rights">u</column>
+        </table>
+        <table name="authors">
+            <column name="id">4</column>
+            <column name="login">Ivan</column>
+            <column name="password"></column>
+            <column name="rights">u</column>
+        </table>
+    </database>
+</pma_xml_export>
